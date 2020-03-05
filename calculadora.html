@@ -1,63 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body{
+      font-family: 'Oswald', sans-serif;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(to right, #59c1ca, #007eff);
+    }
+  
+    body {
+      color: cyan;
+    }
+
+    td > input[type="button"] {
+      width: 50px;
+      height: 50px;
+      font-weight: bold;
+    }
+
+    td > input.igual {
+      height: 100px;
+    }
+
+    td > input.zero {
+      width: 104px;
+    }
+
+    .visor {
+      width: 213px;
+      margin-left:2px;
+      height: 40px;
+      font-size: 20px;
+      padding-left: 5px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      letter-spacing: 4px;
+    }
+
+  </style>
+  <script>
+
+    function inserir(num) {
+      document.calc.visor.value += num;
+    }
+
+    function zerar() {
+      document.calc.visor.value = "";
+    }
+
+    function apagar() {
+      let visor = document.calc.visor.value;
+      document.calc.visor.value = visor.substring(0, visor.length - 1);
+    }
+
+    function igual() {
+      var calc = document.calc.visor.value;
+      if (calc) {
+        document.calc.visor.value = eval(calc);
+      }
+    }
+
+  </script>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Calculadora</h1>
+  <div class="container">
 
-        <h3>Digite um numero:</h3>
-        <form name="form1">
-            <input type="text" name="t1">
-            <h3>Digite outro numero:<h3>
-            <input type="text" name="t2"><br><br>
-            <input type="button" name="b1" value="+" onClick="soma(form1)">
-            <input type="button" name="b2" value="-" onClick="sub(form1)">
-            <input type="button" name="b3" value="*" onClick="mult(form1)">
-            <input type="button" name="b4" value="/" onClick="div(form1)">
-            <br><br>
-        </form>
-    </div>
-    
-    <script>
-        function soma(form1)
-        {
-           a=new Number(form1.t1.value);
-           b=new Number(form1.t2.value);
-           c=new Number(a+b);
-           alert("A soma dos números é:  "+c);
-        }
-        
-        function sub(form1)
-        {
-           a=new Number(form1.t1.value);
-           b=new Number(form1.t2.value);
-           c=new Number(a-b);
-           alert("A subtração dos numeros é:  "+c);
-        }
-        function mult(form1)
-        {
-           a=new Number(form1.t1.value);
-           b=new Number(form1.t2.value);
-           c=new Number(a*b);
-           alert("A Multiplicação dos números é:  "+c);
-        }
-        function div(form1)
-        {
-           a=new Number(form1.t1.value);
-           b=new Number(form1.t2.value);
-           c=new Number(a/b);
-           alert("A divisão dos números é:  "+c);
-        }
-        
-        
-        </script>
+    <h1>Calculadora</h1>
+
+    <form name="calc">
+      <input type="text" name="visor" class="visor" readonly>
+
+      <table>
+        <tr>
+          <td><input type="button" value="C" onClick="zerar()"></td>
+          <td><input type="button" value="&lt;" onClick="apagar()"></td>
+          <td><input type="button" value="/" onClick="inserir(value)"></td>
+          <td><input type="button" value="x" onClick="inserir('*')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="7" onClick="inserir(value)"></td>
+          <td><input type="button" value="8" onClick="inserir(value)"></td>
+          <td><input type="button" value="9" onClick="inserir(value)"></td>
+          <td><input type="button" value="-" onClick="inserir(value)"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" onClick="inserir(value)"></td>
+          <td><input type="button" value="5" onClick="inserir(value)"></td>
+          <td><input type="button" value="6" onClick="inserir(value)"></td>
+          <td><input type="button" value="+" onClick="inserir(value)"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="1" onClick="inserir(value)"></td>
+          <td><input type="button" value="2" onClick="inserir(value)"></td>
+          <td><input type="button" value="3" onClick="inserir(value)"></td>
+          <td rowspan="2"><input type="button" class="igual" value="=" onClick="igual()"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="button" class="zero" value="0" onClick="inserir(value)"></td>
+          <td><input type="button" value="." onClick="inserir(value)"></td>
+        </tr>
+      </table>
+    </form>
+
+
+
+  </div>
+
+
 </body>
+
 </html>
