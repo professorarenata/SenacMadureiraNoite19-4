@@ -1,0 +1,21 @@
+body {
+    background-image: url('001.jpg');
+}
+div{
+    Background-color:("lightblue");
+    border-style: inset;
+     width: 50%;
+     margin: auto;
+    
+}
+
+h1{
+    color: white;
+    font-family: Book Antiqua;
+    font-size: 300%
+}
+
+p{
+    color: white;
+    font-family: Book Antiqua;
+}
