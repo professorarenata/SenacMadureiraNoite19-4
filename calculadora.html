@@ -1,79 +1,63 @@
+<!DOCTYPE html>
 <html>
 <head>
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-   <link rel="stylesheet" href="style.css">
-   <title>Calculadora</title>
-<script>
-   
-function soma(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a+b);
-   alert("A soma dos números é:  "+c);
-}
-
-function sub(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a-b);
-   alert("A subtração dos números é:  "+c);
-}
-
-
-function div(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a/b);
-   alert("A subtração dos números é:  "+c);
-}
-
-
-function mult(form1)
-{
-   a=new Number(form1.t1.value);
-   b=new Number(form1.t2.value);
-   c=new Number(a*b);
-   alert("A subtração dos números é:  "+c);
-}
-
-
-
-
-</script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
 </head>
-
 <body>
-   <div style="background-color: lightseagreen;"  class="w3-container w3-border w3-round-xlarge">
-<center><h1>Calculadora<br></h1>
-   <div>
-      <img src="0010.gif" width="100%">
-   </div>
-  <h3>
-<p>Digite um Número:</p>
-<form name="form1">
-  <input type="text" name="t1"><br>
-  <p>Digite outro Número:<br></p>
-  
-  <input type="text" name="t2"><br><br>
-   <p>Escolha uma Fórmula!</p>
-   <hr>
-   <img src="002.png" height="50" size="50" alt="Johnson Pond" onclick="soma(form1)" name="Mais">
-  <!-- <input type="button" name="b1" value="+" onClick="soma(form1)"> -->
-  <img src="003.png" height="50" size="50" alt="Johnson Pond" onclick="sub(form1)">
-  <!-- <input type="button" name="b2" value="-" onClick="sub(form1)"> -->
-  <img src="004.png" height="50" size="50" alt="Johnson Pond" onclick="mult(form1)">
-  <!-- <input type="button" name="b3" value="*" onClick="mult(form1)"> -->
-  <img src="005.png" height="50" size="50" alt="Johnson Pond" onclick="div(form1)">
-   <!-- <input type="button" name="b4" value="/" onClick="div(form1)"> -->
-  <br><br>
-  
-</form>
- </h3>
-   </center>
-   </div>
+
+    <div class="container">
+        <h1>Calculadora</h1>
+
+        <h3>Digite um numero:</h3>
+        <form name="form1">
+            <input type="text" name="t1">
+            <h3>Digite outro numero:<h3>
+            <input type="text" name="t2"><br><br>
+            <input type="button" name="b1" value="+" onClick="soma(form1)">
+            <input type="button" name="b2" value="-" onClick="sub(form1)">
+            <input type="button" name="b3" value="*" onClick="mult(form1)">
+            <input type="button" name="b4" value="/" onClick="div(form1)">
+            <br><br>
+        </form>
+    </div>
+    
+    <script>
+        function soma(form1)
+        {
+           a=new Number(form1.t1.value);
+           b=new Number(form1.t2.value);
+           c=new Number(a+b);
+           alert("A soma dos números é:  "+c);
+        }
+        
+        function sub(form1)
+        {
+           a=new Number(form1.t1.value);
+           b=new Number(form1.t2.value);
+           c=new Number(a-b);
+           alert("A subtração dos numeros é:  "+c);
+        }
+        function mult(form1)
+        {
+           a=new Number(form1.t1.value);
+           b=new Number(form1.t2.value);
+           c=new Number(a*b);
+           alert("A Multiplicação dos números é:  "+c);
+        }
+        function div(form1)
+        {
+           a=new Number(form1.t1.value);
+           b=new Number(form1.t2.value);
+           c=new Number(a/b);
+           alert("A divisão dos números é:  "+c);
+        }
+        
+        
+        </script>
 </body>
 </html>
