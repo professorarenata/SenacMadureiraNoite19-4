@@ -1,3 +1,18 @@
 body{
-    background-color: green;
+    color:white;
+    background-image:url(img/fundo-de-tecnologia-azul-digital-com-numeros-binarios_1017-11824.jpg);
+    background-attachment: fixed;
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    padding-left: 5%;
+    font-family: 'arial', Times, serif 
+}
+.text{
+	font-size: 30px;
+	font-family: Arial,Helvetica;
+	color: white;
+	border: 0px;
+	background:white;
+	width: 325.8px;
+	height: 80px;
 }
