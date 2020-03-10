@@ -1,18 +1,60 @@
-body{
-    color:white;
-    background-image:url(img/fundo-de-tecnologia-azul-digital-com-numeros-binarios_1017-11824.jpg);
-    background-attachment: fixed;
-    background-size: 100% ;
-    background-repeat: no-repeat;
-    padding-left: 5%;
-    font-family: 'arial', Times, serif 
+*{
+    font-family: 'Anton', sans-serif;
 }
-.text{
-	font-size: 30px;
-	font-family: Arial,Helvetica;
-	color: white;
-	border: 0px;
-	background:white;
-	width: 325.8px;
-	height: 80px;
+html, body {
+    
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+} 
+
+.calculadora {
+    display: block;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: antiquewhite;
+    width: fit-content;
+    height:600px;
+    border-radius: 15%;
+    border-width: 30%;
+    border-style: solid;
+    border-color: black;
+}
+
+.calculadora td button {
+    display:block;
+    width: 90px;
+    height: 90px;
+    font-size:35px;
+    border-radius: 50%;
+    outline: 0;
+    border-width: 30%;
+    border-style: solid;
+    border-color: black;
+}
+
+#resultado {
+ display: block;
+ text-align: center;
+ font-size: 40px;
+ margin-bottom: 10px;
+ width: 370px;
+ height: 200px;
+ line-height: 100px;
+ background-color: whitesmoke;
+ border-radius: 15%;
+ overflow-y: scroll;
+ overflow-y: auto;
+ border-width: 30%;
+border-style: solid;
+border-color: black;
+}
+
+.titulo{
+    font-size: 205%;
 }

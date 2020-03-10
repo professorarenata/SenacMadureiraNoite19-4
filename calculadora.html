@@ -1,64 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+  <!-- Os arquivos do JS e do CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <script src="calculadora.js"></script>
+  <link rel="stylesheet" href="estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Calculadora </title>
 </head>
-<body>
+<body onload="inicio();">
+ <!-- Dentro da tag table serão adicionados os botões da calculadora // o atributo colspan vai definir o tamanho do meu conteúdo dentro da linha. -->
+  <table class="calculadora">
+    <p class="titulo"> - DO MATH DUMB - </p>
+    <tr>
+      <td colspan="4"><span id="resultado"> </span></td>
+    </tr>
+    <tr>
+      <td><button id="sete"> 7 </button></td>
+      <td><button id="oito"> 8 </button></td>
+      <td><button id="nove"> 9 </button></td>
+      <td><button id="divisao"> / </button></td>
+    </tr>
+    <tr>
+      <td><button id="quatro"> 4 </button></td>
+      <td><button id="cinco">  5</button></td>
+      <td><button id="seis"> 6 </button></td>
+      <td><button id="multiplicacao"> * </button></td>
+    </tr>
+    <tr>
+      <td><button id="um"> 1 </button></td>
+      <td><button id="dois"> 2 </button></td>
+      <td><button id="tres"> 3 </button></td>
+      <td><button id="subtracao"> - </button></td>
+    </tr>
+    <tr>
+      <td><button id="igual"> = </button></td>
+      <td><button id="resetar"> C </button></td>
+      <td><button id="zero"> 0 </button></td>
+      <td><button id="soma"> + </button></td>
+    </tr>
 
-    <div class="container">
-        <h1>Calculadora</h1>
-
-        <h3>Digite um numero:</h3>
-        <form name="form1">
-            <input type="text" name="t1">
-            <h3>Digite outro numero:</h3>
-            <input type="text" name="t2"><br><br>
-            <input type="button" name="b1" value="+" onClick="soma(form1)">
-            <input type="button" name="b2" value="-" onClick="sub(form1)">
-            <input type="button" name="b3" value="*" onClick="mult(form1)">
-            <input type="button" name="b4" value="/" onClick="div(form1)">
-            <br><br>
-        </form>
-    </div>
-    
-    <script>
-        function soma(form1)
-        {
-            num=Number(form1.t1.value);
-            num2=Number(form1.t2.value);
-            resultado = num+num2;
-            alert("A adição do numero é: " + resultado);
-        
-        }
-        function sub(form1)
-        {
-            num=Number(form1.t1.value);
-            num2=Number(form1.t2.value);
-            resultado = num-num2;
-            alert("A subtração do numero é: " + resultado);
-        
-        }
-        function mult(form1)
-        {
-            num=Number(form1.t1.value);
-            num2=Number(form1.t2.value);
-            resultado = num*num2;
-            alert("A multiplicação do numero é: " + resultado);
-        
-        }
-        function div(form1)
-        {
-            num=Number(form1.t1.value);
-            num2=Number(form1.t2.value);
-            resultado = num/num2;
-            alert("A divisão do numero é: " + resultado);
-        
-        }
-        </script>
+  </table>
+  
 </body>
 </html>
