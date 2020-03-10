@@ -1,0 +1,35 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: black;
+    font-family: 'Times New Roman';
+    background-image: url("./imagem/calculadora2.0.png");
+}
+
+h1 {
+    font-family: helvetica, Geneva, Arial;
+    text-shadow: 3px 4px 5px black;
+    color: #ffffff;
+}
+
+h3 {
+    font-family: 'Times New Roman';
+    color: rgb(228, 228, 228);
+    text-shadow: 5px 2px 10px black;
+}
+
+.container {
+    position: relative;
+    width: fit-content;
+    background-image: linear-gradient(to right, #197575d4, #bb00ff8c);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.432);
+    text-align: center;
+}
